@@ -1,0 +1,248 @@
+# Metabol knowledge core
+# Each principle is a product unit: claim, mechanism, action, exception.
+# Not medical advice. Units and lab ranges must be verified before shipping.
+
+schema_version: 1
+sources_credited:
+  - Dr. Robert Lustig
+  - Dr. Ben Bikman
+  - Dr. Casey Means
+  - Jessie Inchauspé (Glucose Goddess)
+
+principles:
+  - id: insulin-is-the-key
+    cluster: insulin
+    claim: Insulin is the central lever of metabolic health, not calories.
+    mechanism: High insulin blocks fat burning, drives hunger, and is upstream of many chronic diseases even when glucose looks "normal."
+    action: Optimize for low, stable insulin. Ask for a fasting insulin test; many doctors do not order it by default.
+    exception: Do not self-diagnose or change prescribed diabetes care from an app.
+    lab_note: "Founder note: '2-6 mg/dL' is likely the wrong unit. Fasting glucose is mg/dL. Fasting insulin is usually µIU/mL (or pmol/L). Verify before any product copy."
+
+  - id: keep-insulin-low
+    cluster: insulin
+    claim: Keep insulin low. Hyperinsulinemia (frequent insulin spikes) is the state to avoid.
+    mechanism: Repeated spikes force the pancreas to work harder and push the body toward insulin resistance.
+    action: Fewer eating occasions, protein/fat/fiber first, walk after meals, no sugary drinks.
+    exception: People on insulin or insulin-secretagogues need clinician-guided targets.
+
+  - id: insulin-resistance
+    cluster: insulin
+    claim: You do not want insulin resistance.
+    mechanism: Cells respond poorly to insulin, so the pancreas must produce more to keep glucose in range.
+    action: Treat "normal glucose + high insulin" as an early warning, not a clean bill of health.
+    exception: Diagnosis belongs to a clinician.
+
+  - id: metabolic-flexibility
+    cluster: insulin
+    claim: You want metabolic flexibility — switching between glucose and fat for fuel.
+    mechanism: High insulin locks the body in glucose-burning mode, so fat stores are inaccessible.
+    action: If you are hungry every ~2 hours, treat that as a signal you are likely glucose-dependent, not as a willpower failure.
+    exception: High training load, pregnancy, and some medications change hunger independently.
+
+  - id: insulin-and-weight
+    cluster: insulin
+    claim: High insulin makes fat loss hard; lower insulin and the body can use fat for fuel.
+    mechanism: Insulin is a storage hormone. While it is high, lipolysis is suppressed.
+    action: Stop leading with calorie deficits if hunger is constant. Lead with insulin-lowering meals.
+    exception: Calories still exist; this is about which lever to pull first, not magic.
+
+  - id: calories-are-not-equal
+    cluster: insulin
+    claim: Do not count calories as the primary strategy. Different calories are metabolized differently.
+    mechanism: 100 kcal of sugar and 100 kcal of eggs do not produce the same insulin, satiety, or liver load.
+    action: Judge food by insulin/glucose effect, protein, fiber, and processing — not kcal.
+    exception: Energy balance still matters in extreme surplus or deficit.
+
+  - id: tofi-skinny-fat
+    cluster: body
+    claim: You can be lean and metabolically unhealthy, or obese and relatively healthier. TOFI is real.
+    mechanism: Visceral and ectopic fat, plus insulin, matter more than the number on the scale.
+    action: Do not use BMI or "looking fit" as a metabolic score.
+    exception: None for screening; still not a diagnosis.
+
+  - id: visceral-vs-subcutaneous
+    cluster: body
+    claim: Visceral fat is the dangerous fat. Subcutaneous fat is less so.
+    mechanism: Visceral fat is metabolically active and inflammatory.
+    action: Waist, energy, fasting insulin, trigs/HDL beat scale weight.
+    exception: Imaging is the gold standard; consumer proxies are rough.
+
+  - id: sex-differences
+    cluster: body
+    claim: Male and female bodies are different. What works is personal.
+    mechanism: Hormones, cycle, menopause, and muscle mass change fuel use and hunger.
+    action: Treat every protocol as a n=1 experiment with a 2-week test window.
+    exception: Do not average population Twitter advice onto one body.
+
+  - id: listen-to-symptoms
+    cluster: body
+    claim: The body signals long before a disease label.
+    mechanism: Crashes, cravings, brain fog, hunger every 2 hours, poor sleep are early data.
+    action: Log symptoms next to meals before labs are "bad."
+    exception: Symptoms are not a substitute for care when they are severe.
+
+  - id: sugar-is-unnecessary
+    cluster: sugar
+    claim: Sugar is bad for all of us. We do not need it to live. It is dopaminergic and addictive.
+    mechanism: Rapid glucose/fructose load, insulin spike, dopamine, then crash and recaving.
+    action: Default is no added sugar. If you eat it, only after a full meal, never on an empty stomach.
+    exception: Glucose Goddess-style dessert-after-meal is harm reduction, not a green light.
+
+  - id: all-sweet-spikes
+    cluster: sugar
+    claim: If it tastes sweet, treat it as a spike. The body does not care that the mango is "natural."
+    mechanism: Sweet taste usually means fast carbohydrate, with or without a health halo.
+    action: Avoid sugary drinks, sugary fruit, and sweet snacks, natural or artificial, as the default.
+    exception: Whole fruit with skin (fiber) is not the same as juice or dried fruit. Encode this exception in the UI or you will lose trust.
+
+  - id: hidden-sugar
+    cluster: sugar
+    claim: Sugar has 200+ names. It hides in food and some medicines.
+    action: If sugar (any name) is in the first 3–5 ingredients, classify the item as a dessert.
+    mechanism: Ingredient order is by weight. Early sugar means a sugar-delivery vehicle.
+    exception: Spices/extracts listed after salt can be rounding error; still flag if the product tastes sweet.
+
+  - id: sugar-is-the-new-fries
+    cluster: sugar
+    claim: At all costs avoid sugary drinks and liquid sugar.
+    mechanism: Liquids spike faster, do not satiate, and are the industry's highest-margin insulin bomb.
+    action: Water, unsweetened tea/coffee. Treat juice and sports drinks as soda.
+    exception: Medical glucose treatment for hypoglycemia is not "a sports drink habit."
+
+  - id: fiber-is-godsent
+    cluster: plate
+    claim: Fiber is the most important food lever you can add.
+    mechanism: Slows absorption, blunts glucose, feeds satiety, and in whole fruit the skin buffers fructose.
+    action: Eat foods as nature made them. Apple with skin, not juice.
+    exception: GI disease may need a slower fiber ramp.
+
+  - id: carbs-are-starch-and-sugar
+    cluster: plate
+    claim: Carbs = starches + sugar. Prefer low-carb when possible; if carbs, complex not refined.
+    action: Default plate is fiber, protein, fat. Starch last and smaller.
+    exception: Heavy training days may need more starch, still after protein/fiber.
+
+  - id: food-order
+    cluster: plate
+    claim: Eat in this order — fiber first, protein and fat second, carbs/sugar last.
+    mechanism: Vinegar/fiber/protein slow gastric emptying and flatten the glucose curve (Glucose Goddess hacks).
+    action: Start meals with vegetables/salad. Never open with bread or dessert on an empty stomach.
+    exception: Social meals — do the order approximately, not perfectly.
+
+  - id: savory-breakfast
+    cluster: plate
+    claim: Savory breakfast beats sweet breakfast for a stable glucose day.
+    mechanism: A morning sugar load sets a rollercoaster that drives later cravings.
+    action: Eggs, yogurt without sugar, leftovers, meat, vegetables. No cereal, juice, sweet lattes as breakfast.
+    exception: None strong enough to put in v1 defaults.
+
+  - id: start-day-with-fat
+    cluster: plate
+    claim: Start the day with fat.
+    mechanism: Fat is satiating and insulin-low compared with a carb breakfast.
+    action: Build breakfast around fat + protein, not toast.
+    exception: Individual tolerance (GI) varies.
+
+  - id: move-after-meals
+    cluster: behavior
+    claim: Move after meals. A short walk is enough.
+    mechanism: Contracting muscle pulls glucose out of blood without needing more insulin.
+    action: 10–15 minutes of walking after the two biggest meals.
+    exception: Injury — any movement counts, including standing and chores.
+
+  - id: three-meals
+    cluster: behavior
+    claim: No more than 3 meals. Snack only if you must. Frequent eating overwhelms the body.
+    mechanism: Every eating occasion is an insulin occasion. Grazing = chronic insulin.
+    action: Breakfast, lunch, dinner. If hungry between, inspect the last meal (protein/fiber missing) before adding a snack.
+    exception: Hypoglycemia risk, pregnancy, certain sports.
+
+  - id: early-dinner
+    cluster: behavior
+    claim: Dinner around 6–7pm gives the night to digest and repair.
+    mechanism: Late eating stacks insulin and glucose against circadian insulin sensitivity, which is worse at night.
+    action: Default last bite early evening. Stop the "second dinner."
+    exception: Shift workers need a different clock, same principle (last meal, then a fast).
+
+  - id: diet-exercise-sleep
+    cluster: behavior
+    claim: Diet, exercise, and sleep are equally important.
+    mechanism: Sleep loss raises insulin resistance the next day; training improves disposal; food drives the load.
+    action: Do not "eat perfect" and sleep 5 hours and call it metabolic health.
+    exception: None.
+
+  - id: inflammation
+    cluster: labs
+    claim: Keep chronic inflammation low. It drives metabolic damage.
+    action: Consider hsCRP as a status check, plus food quality and sleep.
+    exception: Acute infection raises CRP; do not panic on one number.
+
+  - id: lipids-that-matter
+    cluster: labs
+    claim: Total cholesterol is a weak headline. Triglycerides, HDL, and LDL particle type matter more.
+    mechanism: The liver converts sugar to fat → triglycerides. Small dense LDL is the unwanted pattern; large buoyant is less concerning in this framework.
+    action: Track trigs, HDL, trig/HDL ratio, and (when available) LDL subfraction or apoB. Connect high trigs back to sugar.
+    exception: This is contested in mainstream cardiology. Product copy must not overclaim.
+
+  - id: glucose-stable
+    cluster: glucose
+    claim: Keep blood glucose stable. No dangerous spikes. Avoid the glucose rollercoaster.
+    mechanism: Spikes that do not come down drive energy crashes, cravings, and insulin demand.
+    action: Use food order, walking, savory breakfast, and no liquid sugar as the default stack.
+    exception: CGM noise is real; do not obsess over every 10 mg/dL wiggle.
+
+  - id: glucose-goddess-hacks
+    cluster: glucose
+    claim: Jessie Inchauspé's glucose hacks work and are the most demoable layer of this knowledge.
+    action: Productize the hacks: food order, savory breakfast, vinegar, walk after meals, clothes carbs in fiber/protein.
+    exception: Hacks are harm reduction on a bad food environment, not a license for unlimited dessert.
+
+  - id: glp1-naturally
+    cluster: glucose
+    claim: Stable glucose → better energy, fewer cravings, higher natural GLP-1, easier fasting.
+    mechanism: Protein, fiber, and slower eating improve satiety signaling.
+    action: Sell the feeling (steady energy, no 2-hour hunger), not the hormone name, in consumer copy.
+    exception: Do not position as a Ozempic alternative.
+
+  - id: whole-foods
+    cluster: food-environment
+    claim: Eat real, whole foods. Almost no junk, processed, or packaged food.
+    mechanism: Processing strips fiber and adds sugar/seed-oil hyperpalatability.
+    action: If it needs a marketing claim to sound like food, it is probably not food.
+    exception: Frozen vegetables, plain yogurt, canned fish, etc. are whole-ish and should not be punished.
+
+  - id: food-is-medicine
+    cluster: food-environment
+    claim: Food is medicine if done the right way.
+    action: Use food as the first intervention for energy, hunger, and weight — alongside, not instead of, care.
+    exception: Hard medical boundary. Metabol does not diagnose or treat.
+
+  - id: industry-propaganda
+    cluster: food-environment
+    claim: The food industry sells for profit, not health. Grocery stores are designed to make you buy sugar.
+    mechanism: End-caps, checkout, "healthy" packaging, 200 names for sugar.
+    action: The product should decode the aisle, not moralize the user.
+    exception: None.
+
+  - id: chronic-modernity
+    cluster: food-environment
+    claim: The ancestral pattern was not chronic eating, chronic stress, or ultra-processed food. The propaganda made veggies look extreme and soda look normal.
+    action: Frame Metabol as returning defaults, not as an extreme diet.
+    exception: Do not romanticize history; use it as a contrast, not a protocol.
+
+  - id: doctors-lag
+    cluster: system
+    claim: Doctors are trained to diagnose current disease, not prevent the one 10 years out. Fasting insulin is under-ordered.
+    action: Teach users which questions to ask. Do not bash clinicians as the brand.
+    exception: Partnership with clinicians is a later channel.
+
+clusters:
+  insulin: Keep insulin low. This is the north star.
+  glucose: Flatten the curve. Tactics live here.
+  plate: What and in what order.
+  behavior: Timing, walking, sleep, meal frequency.
+  body: TOFI, visceral fat, sex differences.
+  labs: Fasting insulin, hsCRP, trigs/HDL — not total cholesterol.
+  sugar: Avoid, hide-and-seek, dessert rule.
+  food-environment: Industry, processing, grocery design.
+  system: Care gap, prevention vs diagnosis.
